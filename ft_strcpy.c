@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 20:12:05 by bekim             #+#    #+#             */
+/*   Updated: 2020/02/18 20:22:58 by bekim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+char		*ft_strcpy(char *dst, const char *src)
 {
-	char *cpy;
+	char	*cpy;
 
 	cpy = dst;
 	while (*src)
@@ -12,5 +24,5 @@ char *ft_strcpy(char *dst, const char *src)
 		src++;
 	}
 	*cpy = *src;
-	return dst;
+	return (dst);
 }

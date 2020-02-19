@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 20:11:43 by bekim             #+#    #+#             */
+/*   Updated: 2020/02/18 20:18:04 by bekim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char*		ft_strcat(char *restrict s1, const char *restrict s2)
+char		*ft_strcat(char *restrict s1, const char *restrict s2)
 {
 	ft_strcpy(&s1[ft_strlen(s1)], s2);
 	return (s1);

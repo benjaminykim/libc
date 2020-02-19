@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 20:10:48 by bekim             #+#    #+#             */
+/*   Updated: 2020/02/18 20:21:48 by bekim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void		putnbr_helper(int n, int fd)
+static void	putnbr_helper(int n, int fd)
 {
 	char c;
 
 	if (n == 0)
-		return;
+		return ;
 	putnbr_helper(n / 10, fd);
 	c = n % 10 + '0';
 	write(fd, &c, 1);

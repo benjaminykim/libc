@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 20:13:57 by bekim             #+#    #+#             */
+/*   Updated: 2020/02/18 20:24:24 by bekim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int			count_strings(char const *str, char c)
+static int	count_strings(char const *str, char c)
 {
 	int		index;
 	int		count;
@@ -19,7 +31,7 @@ int			count_strings(char const *str, char c)
 	return (count);
 }
 
-int			str_len(char const *str, char c)
+static int	str_len(char const *str, char c)
 {
 	int		size;
 
@@ -32,7 +44,7 @@ int			str_len(char const *str, char c)
 	return (size);
 }
 
-char		*create_word(char const *str, int len)
+static char	*create_word(char const *str, int len)
 {
 	char	*word;
 
@@ -50,10 +62,10 @@ char		**ft_strsplit(char const *s, char c)
 
 	index = 0;
 	size = count_strings(s, c);
-	ret = (char **) malloc(sizeof(char*) * (size + 1));
+	ret = (char **)malloc(sizeof(char*) * (size + 1));
 	while (index < size)
 	{
-		while(*s == c)
+		while (*s == c)
 			s++;
 		word = create_word(s, str_len(s, c));
 		ret[index] = word;

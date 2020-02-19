@@ -1,20 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 20:14:17 by bekim             #+#    #+#             */
+/*   Updated: 2020/02/18 20:49:35 by bekim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int			is_set(char c, char const *set)
+static int	is_set(char c)
 {
-	char	*trim_char;
-
-	trim_char = (char *) set;
-	while (*trim_char)
-	{
-		if (*trim_char == c)
-			return (1);
-		trim_char++;
-	}
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
 	return (0);
 }
 
-char		*ft_strtrim(char const *s, char const *set)
+char		*ft_strtrim(char const *s)
 {
 	int		start;
 	int		end;
@@ -23,11 +28,11 @@ char		*ft_strtrim(char const *s, char const *set)
 
 	start = 0;
 	end = ft_strlen(s) - 1;
-	while (is_set(s[start], set))
+	while (is_set(s[start]))
 	{
 		start++;
 	}
-	while (is_set(s[end], set) && end >= start)
+	while (is_set(s[end]) && end >= start)
 	{
 		end--;
 	}
