@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:12:20 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 20:12:20 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 13:09:15 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int			ft_strequ(char const *s1, char const *s2)
 {
+	if (s1 == NULL || s2 == NULL)
+		return (1);
 	if (ft_strcmp(s1, s2))
 		return (0);
 	return (1);

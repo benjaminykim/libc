@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:13:01 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 20:13:01 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 13:09:38 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	char	*ret;
 	char	*cpy_ret;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	ret = ft_strnew(ft_strlen(s));
 	if (ret == NULL)
 		return (NULL);

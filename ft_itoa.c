@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:08:17 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 20:20:03 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 13:03:16 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char		*ft_itoa(int n)
 	ret = ft_strnew(12);
 	ft_strclr(ret);
 	c = (char *)malloc(sizeof(char) * 2);
+	if (c == NULL)
+		return (NULL);
 	if (n == -2147483648)
 		return (ft_strcpy(ret, "-2147483648"));
 	if (n < 0)

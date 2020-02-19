@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:14:17 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 20:49:35 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 13:06:23 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char		*ft_strtrim(char const *s)
 	int		size;
 	char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s) - 1;
 	while (is_set(s[start]))
@@ -38,6 +40,8 @@ char		*ft_strtrim(char const *s)
 	}
 	size = end - start;
 	str = ft_strnew(size + 1);
+	if (str == NULL)
+		return (NULL);
 	ft_strncpy(str, s + start, size + 1);
 	return (str);
 }
