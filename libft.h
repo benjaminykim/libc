@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:21:58 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 23:01:37 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 14:24:12 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
-void				ft_putchar(char c);
+void				ft_putchar(int c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
