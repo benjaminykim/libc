@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:21:58 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 20:57:45 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/18 22:59:34 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
 
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
