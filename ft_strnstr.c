@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:13:41 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/18 22:49:59 by bekim            ###   ########.fr       */
+/*   Updated: 2020/02/19 11:07:48 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 	{
 		haystack_scanner = haystack;
 		needle_scanner = needle;
-		len_tracker = len;
-		while (*needle_scanner == *haystack_scanner && len_tracker != 0
+		len_tracker = len + 1;
+		while (*needle_scanner == *haystack_scanner && len_tracker-- != 0
 				&& *needle_scanner && *haystack_scanner)
 		{
-			len_tracker--;
 			needle_scanner++;
 			haystack_scanner++;
 		}
