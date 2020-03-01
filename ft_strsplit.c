@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:13:57 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/19 15:57:37 by bekim            ###   ########.fr       */
+/*   Updated: 2020/03/01 05:01:58 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,14 @@ char		**ft_strsplit(char const *s, char c)
 	int		index;
 	char	*word;
 
-	index = 0;
+	if (!s)
+		return (NULL);
+	index = -1;
 	size = count_strings(s, c);
 	ret = (char **)malloc(sizeof(char*) * (size + 1));
 	if (ret == NULL)
 		return (NULL);
-	while (index < size)
+	while (++index < size)
 	{
 		while (*s == c)
 			s++;
@@ -77,7 +79,6 @@ char		**ft_strsplit(char const *s, char c)
 		ret[index] = word;
 		while (*s != c && *s)
 			s++;
-		index++;
 	}
 	ret[index] = 0;
 	return (ret);

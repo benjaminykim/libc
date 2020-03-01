@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_printintsquare.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 20:14:08 by bekim             #+#    #+#             */
-/*   Updated: 2020/03/01 05:02:37 by bekim            ###   ########.fr       */
+/*   Created: 2020/03/01 05:35:10 by bekim             #+#    #+#             */
+/*   Updated: 2020/03/01 05:36:04 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strsub(char const *s, unsigned int start, size_t len)
+void				ft_printintsquare(int **array, int dim)
 {
-	char			*dst;
-	unsigned int	index;
+	int				i;
+	int				j;
 
-	dst = ft_memalloc(len + 1);
-	index = 0;
-	if (dst == NULL || s == NULL)
-		return (NULL);
-	while (index < start)
+	i = 0;
+	while (i < dim)
 	{
-		s++;
-		index++;
+		j = 0;
+		while (j < dim)
+		{
+			ft_putnbr(array[i][j]);
+			j++;
+		}
+		i++;
 	}
-	return (ft_strncpy(dst, s, len));
 }

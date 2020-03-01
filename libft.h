@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:21:58 by bekim             #+#    #+#             */
-/*   Updated: 2020/02/19 15:05:46 by bekim            ###   ########.fr       */
+/*   Updated: 2020/03/01 05:39:26 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_printcharsquare(char **array, int dim);
+int					ft_isspace(char c);
+int					ft_lstsize(t_list *lst);
+void				ft_printintsquare(int **array, int dim);
+void				ft_printstrs(char **array);
 #endif

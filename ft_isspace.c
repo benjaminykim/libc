@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 20:14:08 by bekim             #+#    #+#             */
-/*   Updated: 2020/03/01 05:02:37 by bekim            ###   ########.fr       */
+/*   Created: 2020/03/01 05:28:56 by bekim             #+#    #+#             */
+/*   Updated: 2020/03/01 05:31:01 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strsub(char const *s, unsigned int start, size_t len)
+int			ft_isspace(char c)
 {
-	char			*dst;
-	unsigned int	index;
-
-	dst = ft_memalloc(len + 1);
-	index = 0;
-	if (dst == NULL || s == NULL)
-		return (NULL);
-	while (index < start)
-	{
-		s++;
-		index++;
-	}
-	return (ft_strncpy(dst, s, len));
+	if (c == ' ' || c == '\n' || c == '\t')
+		return (1);	
+	return (0);
 }
