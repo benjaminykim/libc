@@ -1,9 +1,14 @@
  version: 2
+
+ workflows:
+     version: 2
+
  jobs:
    build:
      docker:
          - image: cimg/base:2020.01
      steps:
        - checkout
-       - run: echo "A first hello"
-
+       - run:
+            name: Compile code
+            command: make re
