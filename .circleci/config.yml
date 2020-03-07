@@ -2,7 +2,7 @@
  jobs:
    build:
      docker:
-       - image: circleci/welcome-orb@0.4.1
+         - image: cimg/base:2020.01
      steps:
        - checkout
        - run: echo "A first hello"
