@@ -6,7 +6,7 @@
 /*   By: bekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:13:57 by bekim             #+#    #+#             */
-/*   Updated: 2020/03/01 05:01:58 by bekim            ###   ########.fr       */
+/*   Updated: 2020/03/07 13:15:36 by bekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 static int	count_strings(char const *str, char c)
 {
-	int		index;
 	int		count;
 
-	index = 0;
 	count = 0;
 	while (*str)
 	{
